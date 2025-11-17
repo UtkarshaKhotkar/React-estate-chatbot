@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Card, Form, Button, Spinner } from 'react-bootstrap';
 import axios from 'axios';
 import ChatMessage from './ChatMessage';
+import API_BASE_URL from '../config';
 import './ChatInterface.css';
 
 const SAMPLE_QUERIES = [
@@ -39,7 +40,7 @@ function ChatInterface({ fileId }) {
     setLoading(true);
 
     try {
-      const response = await axios.post('/api/analyze/', {
+      const response = await axios.post(`${API_BASE_URL}/api/analyze/`, {
         query: inputValue,
         file_id: fileId
       });
