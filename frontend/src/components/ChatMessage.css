@@ -1,0 +1,30 @@
+.message-wrapper {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-wrapper.user-message {
+  align-items: flex-end;
+}
+
+.message-wrapper.bot-message {
+  align-items: flex-start;
+}
+
+.message-card {
+  max-width: 85%;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-message .message-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  padding: 0 0.5rem;
+}

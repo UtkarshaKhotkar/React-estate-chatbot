@@ -1,0 +1,9 @@
+.file-upload-card {
+  border-radius: 10px;
+  background: white;
+}
+
+.file-upload-card h6 {
+  color: #667eea;
+  font-weight: 600;
+}
