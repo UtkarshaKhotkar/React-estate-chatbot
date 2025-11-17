@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Form, Button, Alert } from 'react-bootstrap';
 import axios from 'axios';
+import API_BASE_URL from '../config';
 import './FileUpload.css';
 
 function FileUpload({ onFileUploaded }) {
@@ -24,7 +25,7 @@ function FileUpload({ onFileUploaded }) {
     setMessage(null);
 
     try {
-      const response = await axios.post('/api/upload/', formData, {
+      const response = await axios.post(`${API_BASE_URL}/api/upload/`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
